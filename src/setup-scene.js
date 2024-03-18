@@ -23,7 +23,7 @@ export function setupScene( { canvas } ) {
 	const FAR = 2_000
 
 	const camera = new PerspectiveCamera( FOV, ASPECT, NEAR, FAR )
-	camera.position.set( 50, 50, 50 )
+	camera.position.set( 100, 100, 100 )
 	camera.lookAt( 0, 0, 0 )
 
 	// Renderer

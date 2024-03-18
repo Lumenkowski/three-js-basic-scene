@@ -1,6 +1,7 @@
 import "./main.css"
-import { GridHelper, AxesHelper } from "three"
 import { setupScene } from "./setup-scene"
+import { GridHelper } from "./helpers/GridHelper"
+import { AxesHelper } from "./helpers/AxesHelper"
 
 // Canvas
 
@@ -14,11 +15,15 @@ const { scene } = setupScene( { canvas } )
 // Helpers
 
 {
-	const helper = new GridHelper( 200, 50, 0x808080, 0x404040 )
+	// Infinite GridHelper
+
+	const helper = new GridHelper( 10, 100, 0xffffff )
 	scene.add( helper )
 }
 
 {
+	// Thick AxesHelper
+
 	const helper = new AxesHelper( 2_000 )
 	scene.add( helper )
 }
